@@ -12,6 +12,31 @@ import ChangePassword from '../ChangePassword/ChangePassword'
 // import Moodboard from '../Moodboard/Moodboard'
 import Title from '../Title/Title'
 import Details from '../Details/Details'
+import Moodboard from '../Moodboard/Moodboard'
+import Chat from '../Chat/Chat'
+
+const TabSelector = ({ selectedTab, onSetTab }) => {
+  const availableTabs = ['Details', 'Moodboard', 'Chat']
+  const selectNewTab = (event) => {
+    const newTab = event.target.id
+    onSetTab(newTab)
+  }
+
+  const getStyle = (tab) => {
+    if (tab === selectedTab) {
+      return { background: 'blue' }
+    }
+  }
+  return (
+    <div>
+      {availableTabs.map((tab) =>
+        <button style={getStyle(tab)} key={tab} id={tab} onClick={selectNewTab}>
+          {tab}
+        </button>
+      )}
+    </div>
+  )
+}
 
 class App extends Component {
   constructor () {
@@ -19,7 +44,8 @@ class App extends Component {
 
     this.state = {
       user: null,
-      msgAlerts: []
+      msgAlerts: [],
+      selectedTab: 'Details'
     }
   }
 
@@ -31,8 +57,26 @@ class App extends Component {
     this.setState({ msgAlerts: [...this.state.msgAlerts, { heading, message, variant }] })
   }
 
+  setTab = (newTab) => {
+    this.setState({ selectedTab: newTab })
+  }
+
+  getSelectedTab = () => {
+    const { selectedTab } = this.state
+    if (selectedTab === 'Details') {
+      return <Details/>
+    }
+
+    if (selectedTab === 'Moodboard') {
+      return <Moodboard/>
+    }
+    if (selectedTab === 'Chat') {
+      return <Chat/>
+    }
+  }
+
   render () {
-    const { msgAlerts, user } = this.state
+    const { msgAlerts, user, selectedTab } = this.state
 
     return (
       <Fragment>
@@ -59,8 +103,10 @@ class App extends Component {
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
+
         <Title />
-        <Details />
+        <TabSelector selectedTab={selectedTab} onSetTab={this.setTab}></TabSelector>
+        {this.getSelectedTab()}
       </Fragment>
     )
   }

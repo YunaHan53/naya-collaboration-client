@@ -1,11 +1,8 @@
 import React from 'react'
 
-export class Moodboard extends React.component {
-  constructor(props) {
-    super()
-  }
+export class Moodboard extends React.Component {
   render () {
-    return (<div></div>);
+    return (<div>123</div>)
   }
 }
 
