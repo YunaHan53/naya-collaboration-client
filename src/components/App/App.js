@@ -9,6 +9,10 @@ import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 
+// import Moodboard from '../Moodboard/Moodboard'
+import Title from '../Title/Title'
+import Details from '../Details/Details'
+
 class App extends Component {
   constructor () {
     super()
@@ -55,6 +59,8 @@ class App extends Component {
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
+        <Title />
+        <Details />
       </Fragment>
     )
   }
