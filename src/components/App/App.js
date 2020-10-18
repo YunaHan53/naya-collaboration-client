@@ -24,13 +24,13 @@ const TabSelector = ({ selectedTab, onSetTab }) => {
 
   const getStyle = (tab) => {
     if (tab === selectedTab) {
-      return { background: 'blue' }
+      return { border: 'black' }
     }
   }
   return (
-    <div>
+    <div className="mx-auto">
       {availableTabs.map((tab) =>
-        <button style={getStyle(tab)} key={tab} id={tab} onClick={selectNewTab}>
+        <button className="border-0 rbga-white-strong" style={getStyle(tab)} key={tab} id={tab} onClick={selectNewTab}>
           {tab}
         </button>
       )}

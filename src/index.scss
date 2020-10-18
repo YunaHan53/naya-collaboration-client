@@ -1,5 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 
+// App component
+.button-tabs {
+  display: inline-flex;
+}
+
 // Title Component
 .title {
   padding-top: 2%;
@@ -13,7 +18,14 @@
 }
 
 // Details component
+.container {
+  padding-top: 2%;
+  margin: 0 auto;
+}
+
 .image-container {
+  padding-top: 2%;
+  padding-bottom: 2%;
   display: flex;
   justify-content: center;
 }
@@ -22,4 +34,31 @@
   display: inline;
   width: 75%;
   align-items: center;
+}
+
+.dropdown-image {
+  width: 15%;
+  padding-bottom: 2%;
+}
+
+.slider-image {
+  width: 85%;
+  padding-bottom: 2%;
+}
+
+.dimensions-image {
+  width: 55%;
+  padding-top: 2%;
+  padding-bottom: 7%;
+}
+
+.deposit-image {
+  width: 95%;
+  padding-top: 10%;
+}
+
+// Address component
+.address-input {
+  padding-top: 5%;
+  padding-bottom: 10%;
 }

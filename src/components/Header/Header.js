@@ -24,7 +24,7 @@ const unauthenticatedOptions = (
 
 const Header = ({ user }) => (
   <Navbar bg="light" variant="light" expand="md">
-    <Navbar.Brand href="#">Naya</Navbar.Brand>
+    <Navbar.Brand href="#">naya</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto">
