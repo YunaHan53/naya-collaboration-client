@@ -1,4 +1,4 @@
-# Naya Onboarding
+# Naya Collaboration
 
 ## Tasks
 
