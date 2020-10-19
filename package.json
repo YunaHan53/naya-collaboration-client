@@ -1,6 +1,6 @@
 {
-  "name": "naya-onboarding-client",
-  "homepage": "https://yunahan53.github.io/naya-onboarding-client",
+  "name": "naya-collaboration-client",
+  "homepage": "https://yunahan53.github.io/naya-collaboration-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
