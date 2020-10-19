@@ -1,21 +1,36 @@
 @import '~bootstrap/scss/bootstrap';
 
+
+// App component
+.button-list {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.button-tabs {
+  display: inline-flex;
+  background-color: #fff;
+  border: none;
+}
+
+.button-active {
+  border-bottom: 1px solid black;
+}
+
+// Title Component
 .container {
   padding-top: 2%;
   margin: 0 auto;
 }
 
-// App component
-.button-tabs {
-  display: inline-flex;
-}
-
-// Title Component
 .title {
   padding-top: 2%;
   text-align: center;
   font-weight: bolder;
 }
+
 .image {
   display: flex;
   justify-content: center;
@@ -23,18 +38,20 @@
 }
 
 // Details component
+.feature-title {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
 
 .image-container {
   padding-top: 2%;
   padding-bottom: 2%;
   display: inline-flex;
-  justify-content: center;
 }
 
 .caption-image {
   display: inline;
   width: 75%;
-  align-items: center;
 }
 
 .dropdown-image {

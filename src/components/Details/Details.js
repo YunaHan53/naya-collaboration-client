@@ -20,7 +20,7 @@ const EditableImageCard = ({ imagePath, key }) => {
 const Quantity = () => {
   return (
     <div>
-      <h5>Quantity:</h5>
+      <h5 className="feature-title">Quantity</h5>
       <img className="dropdown-image" src={DropdownImage} alt="Dropdown" />
     </div>
   )
@@ -29,7 +29,7 @@ const Quantity = () => {
 const Budget = () => {
   return (
     <div>
-      <h5>Budget:</h5>
+      <h5 className="feature-title">Budget</h5>
       <img className="slider-image" src={SliderImage} alt="Slider" />
     </div>
   )
@@ -38,7 +38,7 @@ const Budget = () => {
 const Dimensions = () => {
   return (
     <div>
-      <h5>Size & Dimensions:</h5>
+      <h5 className="feature-title">Size & Dimensions</h5>
       <DimensionsInput />
     </div>
   )
@@ -47,7 +47,7 @@ const Dimensions = () => {
 const Shipping = () => {
   return (
     <div>
-      <h5>Shipping Address:</h5>
+      <h5 className="feature-title">Shipping Address</h5>
       <Address />
     </div>
   )
@@ -56,7 +56,7 @@ const Shipping = () => {
 const Info = () => {
   return (
     <div>
-      <h5>Additional Info:</h5>
+      <h5 className="feature-title">Additional Info</h5>
       <AdditionalInfo />
     </div>
   )

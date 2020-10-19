@@ -16,7 +16,7 @@ import Moodboard from '../Moodboard/Moodboard'
 import Chat from '../Chat/Chat'
 
 const TabSelector = ({ selectedTab, onSetTab }) => {
-  const availableTabs = ['Details', 'Moodboard', 'Chat']
+  const availableTabs = ['DETAILS', 'MOODBOARD', 'CHAT']
   const selectNewTab = (event) => {
     const newTab = event.target.id
     onSetTab(newTab)
@@ -24,13 +24,13 @@ const TabSelector = ({ selectedTab, onSetTab }) => {
 
   const getStyle = (tab) => {
     if (tab === selectedTab) {
-      return { border: 'black' }
+      return { background: 'black', color: 'white' }
     }
   }
   return (
-    <div className="mx-auto">
+    <div className="button-list">
       {availableTabs.map((tab) =>
-        <button className="border-0 rbga-white-strong" style={getStyle(tab)} key={tab} id={tab} onClick={selectNewTab}>
+        <button className="button-tabs" style={getStyle(tab)} key={tab} id={tab} onClick={selectNewTab}>
           {tab}
         </button>
       )}
@@ -45,7 +45,7 @@ class App extends Component {
     this.state = {
       user: null,
       msgAlerts: [],
-      selectedTab: 'Details'
+      selectedTab: 'DETAILS'
     }
   }
 
@@ -63,14 +63,14 @@ class App extends Component {
 
   getSelectedTab = () => {
     const { selectedTab } = this.state
-    if (selectedTab === 'Details') {
+    if (selectedTab === 'DETAILS') {
       return <Details/>
     }
 
-    if (selectedTab === 'Moodboard') {
+    if (selectedTab === 'MOODBOARD') {
       return <Moodboard/>
     }
-    if (selectedTab === 'Chat') {
+    if (selectedTab === 'CHAT') {
       return <Chat/>
     }
   }

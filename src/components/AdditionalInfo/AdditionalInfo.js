@@ -31,10 +31,6 @@ class AdditionalInfo extends React.Component {
     this.setState({ name: event.target.value })
   }
 
-  onEmailChange (event) {
-    this.setState({ email: event.target.value })
-  }
-
   onMessageChange (event) {
     this.setState({ message: event.target.value })
   }

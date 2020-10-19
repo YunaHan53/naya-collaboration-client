@@ -36,6 +36,7 @@ export class Chat extends React.Component {
   render () {
     return (
       <div className="container" style={{ maxWidth: '800px', paddingTop: '100px', paddingBottom: '50px' }}>
+        <h5>Chat Box</h5>
         <ChatBox
           messages={messages}
         />
