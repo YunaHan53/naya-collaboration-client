@@ -1,13 +1,13 @@
-let apiUrl;
-const apiUrls = {
-  production: "https://yunahan53.github.io/naya-collaboration-client",
-  development: "http://localhost:4741",
-};
-
-if (window.location.hostname === "localhost") {
-  apiUrl = apiUrls.development;
-} else {
-  apiUrl = apiUrls.production;
-}
-
-export default apiUrl;
+// let apiUrl;
+// const apiUrls = {
+//   production: "https://aqueous-atoll-85096.herokuapp.com",
+//   development: "http://localhost:4741",
+// };
+//
+// if (window.location.hostname === "localhost") {
+//   apiUrl = apiUrls.development;
+// } else {
+//   apiUrl = apiUrls.production;
+// }
+//
+// export default apiUrl;
